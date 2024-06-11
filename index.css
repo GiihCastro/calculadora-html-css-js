@@ -1,0 +1,88 @@
+:root {
+    --bg-color: #2c2c2c;
+    --primary-color: #ffcc00;
+    --secondary-color: #ff8800;
+    --button-bg-color: #ff4500;
+    --button-hover-bg-color: #ff6347;
+    --button-text-color: white;
+    --font-family: 'Helvetica Neve', Arial, sans-serif;
+    --font-size: 1rem;
+    --border-radius: 0.5rem;
+    --padding: 1rem;
+    --button-padding: 1.25rem;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--bg-color);
+    margin: 0;
+    font-family: var(--font-family);
+    color: var(--primary-color);
+}
+
+.calculator {
+    background-color: #3c3c3c;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 2 rem rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 320px;
+    padding: var(--padding);
+}
+
+.display {
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+#result {
+    width: 90%;
+    padding: var(--padding);
+    font-size: 1.5rem;
+    text-align: right;
+    border: none;
+    background-color: #4c4c4c;
+    border-radius: var(--border-radius);
+    color: var(--primary-color);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+button {
+    padding: var(--button-padding);
+    font-size: var(--font-size);
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+.history {
+    margin-top: 1rem;
+}
+
+#historyList {
+    list-style-type: none;
+    padding: 0;
+    max-height: 10rem;
+    overflow-y: auto;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+#historyList li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #555;
+}
